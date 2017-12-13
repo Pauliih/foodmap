@@ -1,0 +1,17 @@
+#splash{
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: #2B2B2B;
+  color: #D07F33;
+}
+
+.title-splash{
+  align-items: center;
+  vertical-align: center;
+}
+
+body{
+  background-color: #2B2B2B;
+}
