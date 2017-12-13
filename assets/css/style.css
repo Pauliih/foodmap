@@ -8,10 +8,21 @@
 }
 
 .title-splash{
-  align-items: center;
-  vertical-align: center;
+  font-size: 50px;
+  font-weight: 400;
+  margin-top: 45vh;
+  margin-bottom: auto;
 }
 
 body{
   background-color: #2B2B2B;
+  color: #D07F33;
 }
+
+.map{
+  width: 100%;
+  height: 35vh;
+}
+
+/*_______________________*/
+
