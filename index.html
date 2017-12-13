@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>FoodMap</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 	<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -12,41 +13,120 @@
 	<div id="splash" class="col-xs-12">
     <h1 class="text-center title-splash">Foodmap</h1>
   </div>
-
-  <header>
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <h1 class="title-main text-center">Foodmap</h1>
-          <hr>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d6657.413788816305!2d-70.61835769999998!3d-33.456942099999985!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2scl!4v1513135802702" class="map" frameborder="0" style="border:0"></iframe>
+  
+  <section id="main-foodmap">  
+    <header>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h1 class="title-main text-center">Foodmap</h1>
+            <hr>
+          </div>
         </div>
       </div>
-    </div>
-  </header>
-  <section id="search">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <h3 class="title-main text-center">Comida cerca de tí</h3>
+    </header>
+    <section id="map">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-8 col-md-offset-2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d13318.736128296354!2d-70.63188572126624!3d-33.43148110717362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1srestaurants!5e0!3m2!1ses!2scl!4v1513190076571" class="map" frameborder="0" style="border:0"></iframe>
+            </div>
         </div>
-        <div class="col-xs-12">
-          <div class="input-group">
-            <input type="text" class="form-control" placeholder="Filtrar Restaurantes"/>
-            <div class="input-group-btn">
-              <div class="btn-group" role="group">
-                <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+      </div>
+    </section>
+    <section id="search">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <h3 class="title-main text-center">Comida cerca de tí</h3>
+          </div>
+          <div class="col-xs-12">
+            <div class="input-group input-search">
+              <input type="text" class="form-control input-search" placeholder="Filtrar Restaurantes"/>
+              <div class="input-group-btn">
+                <div class="btn-group" role="group">
+                  <button type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </section>
+
+    <section id="images">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6 col-img chilena">
+            <img class="img-food" src="assets/img/chilean-food.jpg" alt="">
+            <div data-toggle="modal" data-target="#m-chilean" class="food-overlay1">
+              <p class="title-mouseover">Chilenísima</p>
+            </div>
+          </div>
+          <div class="col-xs-6 col-img">
+            <img data-toggle="modal" data-taget="#m-china" class="img-food" src="assets/img/chinese-1.jpg" alt="">
+            <div class="food-overlay">
+              <p>Chainis</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-4 col-img">
+            <img data-toggle="modal" data-taget="#m-arabe" class="img-food" src="assets/img/arabe796.jpg" alt="">
+            <div class="food-overlay">
+              <p>Comida árabe</p>
+            </div>
+          </div>
+          <div class="col-xs-4 col-img">
+            <img class="img-food" src="assets/img/cocina-mexicana.jpg" alt="">
+            <div class="food-overlay">
+              <p>A lo mero macho</p>
+            </div>
+          </div>
+          <div class="col-xs-4 col-img">
+            <img class="img-food" src="assets/img/gastronomia-peruana.jpg" alt="">
+            <div class="food-overlay">
+              <p>Peruanis</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </section>
   
 	<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script src="https://use.fontawesome.com/7873633050.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="assets/js/app.js"></script>
+
+  <!-- Modales -->
+
+  <!-- Modal Chilena -->
+  <div id="m-chilean" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title title-modal text-center">Divertimento Chileno</h4>
+        </div>
+      <div class="modal-body">
+        <p class="subtitle-modal text-center">Qué Chilenisim@!</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13321.32997317453!2d-70.61892528730634!3d-33.41457487644107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf5ebd5359bd%3A0xc672be2c722a9919!2sDivertimento+Chileno!5e0!3m2!1ses!2scl!4v1513197780774" class="map" frameborder="0" style="border:0"></iframe>
+        <div class="row">
+          <div class="col-xs-6">
+            <p class="text-center">El Cerro 722, Providencia, Región Metropolitana</p>
+          </div>
+          <div class="col-xs-6">
+            <p class="text-center">Servicio a domicilio</p>
+          </div>
+        </div>  
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-now">Pedir Ahora</button>
+      </div>
+    </div>
+   </div>
+  </div><!-- fin modal --> 
+
 </body>
 </html>
